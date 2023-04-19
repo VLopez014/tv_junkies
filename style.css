@@ -17,7 +17,7 @@ li {
   list-style-type: none;
 }
 
-p {
+p, h1 {
   color: #FFF;
 }
 
@@ -25,12 +25,20 @@ label {
   color: #FFF;
 }
 
-input[type="text"]{
+input[type="text"] {
   text-align: center;
 }
 
+img {
+  display: block;
+}
+
 ::placeholder {
-  color: #ffffff76;
+  color: #ffffff84;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 .row {
@@ -41,18 +49,25 @@ input[type="text"]{
 }
 
 .container {
-  padding: 32px 0;
+  padding: 12px 0;
+}
+
+.click {
+  cursor: pointer;
+
 }
 
 
 /* NAV */
 nav {
-  background-color: rgb(0, 20, 39);
+  background-color: #0B0C10;
 }
 
 .web__name {
   color: #ffffff;
   margin-right: 32px;
+  width: 100%;
+  max-width: 100px;
 }
 
 .nav__container {
@@ -71,54 +86,188 @@ nav {
 }
 
 .nav__link {
+  position: relative;
   color: #FFF;
   margin-left: 32px;
+  transition: all 300ms ease;
 }
 
+.nav__link:hover {
+  color: #66FCF1;
+}
+
+
+.nav__link--effect::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  background-color: #66FCF1;
+  transition: all 300ms ease;
+}
+
+.nav__link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
 .search__bar {
-  border: 1px solid #ffffffb8;
-  background-color: #000;
-  color: #ffffff;
+  border: 1px solid #FFF;
+  background-color: #0B0C10;
+  color: #FFF;
   padding: 4px 2px;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 100px;
+  transition: all 300ms ease;
 }
+
+.search__bar:hover {
+  border: 1px solid #ffffff99;
+}
+
+.search__bar:focus {
+  outline: none;
+  border: 1px solid #66FCF1;
+}
+
+
 
 
 /* header */
 header {
   height: calc(100vh - 60px);
-  background-color: rgb(0, 11, 26);
-}
-
-.batman__img--wrapper {
-  border: 1px solid #FFF;
-  width: 100%;
-  max-width: 500px;
-}
-
-.batman__img {
-  width: 100%;
-  display: block;
+  background-color: #0B0C10;
 }
 
 .header__container--1 {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  width: 45%;
+  max-width: 500px;
+  margin-right: 24px;
 }
 
-.header__info--para {
-  font-size: 32px;
-  font-weight: 500;
-  width: 100%;
-  max-width: 500px;
-}
 
 .header__info--container {
   width: 100%;
   max-width: 500px;
 }
 
+.header__info--title {
+  margin-bottom: 24px;
+}
+
+.show__display--container {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.show__img--wrapper {
+  position: relative;
+  border: 1px solid #FFF;
+  width: 230px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.rick_morty__img {
+  position: absolute;
+  max-width: 200px;
+  top: -30px;
+  scale: 1.6;
+  width: 100%;
+}
+
+.the_Walking_Dead__img {
+  position: absolute;
+  width: 100%;
+  scale: 4;
+}
+
+.header__btn {
+  border: 1px solid #FFF;
+  padding: 12px 24px;
+  border-radius: 100px;
+  background-color: rgb(0, 11, 26);
+  color: #FFF;
+  margin-bottom: 24px;
+  margin-right: 24px;
+
+  transition: all 300ms ease;
+}
+
+.header__btn:hover {
+  border: 1px solid #000;
+  background-color: #FFF;
+  color: rgb(0, 11, 26);
+}
+
+.header__btn:active {
+  box-shadow: 1px 1px 10px 1px #66FCF1;
+}
+
+.movie__display--wrapper {
+  border: 1px solid #FFF;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.movie__img--1 {
+  width: 100%;
+}
+
+.movie__display--wrapper-2 {
+  position: relative;
+  border: 1px solid #FFF;
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.movie__img--2 {
+  position: absolute;
+  max-width: 700px;
+  left: -200px;
+}
+
+.movie__display--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__container--main {
+  display: flex;
+  justify-content: center;
+}
+
+.rick_morty--wrapper {
+  margin-right: 24px;
+}
+
+.movie__display--wrapper-3 {
+  border: 1px solid #FFF;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.movie__img--3 {
+  width: 100%;
+}
 
