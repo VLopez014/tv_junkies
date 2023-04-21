@@ -11,6 +11,7 @@
 /* GENERAL */
 body {
   background-color: #1F2833;
+  height: 100vh;
 }
 
 a {
@@ -163,7 +164,7 @@ header {
   width: 100%;
   max-width: 600px;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 @keyframes slide {
